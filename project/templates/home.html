@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <title>Cultural feast</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <style>
+        .fa {
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            background-color: black;
+            color: white;
+            border-radius:50%;
+            right:1%;
+            position: absolute;
+            padding: 6px;
+        }
+        .fa:hover{
+            background-color: white;
+            color: black;
+        }
+        .fa-facebook{top:25%;}
+        .fa-instagram{top:35%;}
+        .fa-twitter{top:45%;}
+        .fa-youtube{top:55%;}
+        p {font-size:30px;top:3%;color: white;left:4%;position: absolute;padding:12px;}
+        .btn{
+            border: none;
+            color: white;
+            left: 3%;
+            position: absolute;
+            top: 30%;
+        }
+        body {
+            font-family: Arial;
+            color: white;
+            overflow-y: scroll;
+        }
+        .sidenav {height:auto;width: 260px;top:20%;left: 0;background-color:darkgrey;
+            overflow-x: hidden;padding-top: 20px;display:none;position: absolute;}
+        .sidenav a {padding: 6px 8px 6px 16px;text-decoration: none;font-size: 25px;color: white;
+            display: block;}
+        .sidenav a:hover {background-color:grey;}
+        .sidenav button{color:white;}
+
+        .split {
+
+            width: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+
+
+        }
+        .top {
+            height:700px;
+            top:0;
+            background-image: url("{% static "images/back.gif" %}");
+            background-size: 100% 100%;
+        }
+
+        .bottom {
+            top:700px;
+            background-image: url("{% static "images/black.jpg" %}");
+            height: 2000px;
+
+        }
+        .center h2{
+            text-align: center;
+            top: 45%;
+            left: 40%;
+            position: absolute;
+        }
+        .center h3{
+            font-family:"Comic Sans MS";
+            font-style: italic;
+            top:55%;
+            left:42%;
+            text-align: center;
+            position: absolute;
+            font-size: small;
+        }
+        .button{
+            background-color: black;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            position: absolute;
+            top: 3%;
+            right: 3%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+        }
+        .button1{
+            right: 8%;
+        }
+        .button:hover{
+            background-color: white;
+            color: black;
+        }
+        .para1{
+            width: 80%;
+            padding: 10px;
+            border: none;
+            margin-left: 10%;
+            margin-top: 4%;
+            background-color:white;
+            color: black;
+            position: absolute;
+            font-family: "Comic Sans MS";
+        }
+        .para2{margin-top:30%;color:black;font-family:"Comic Sans MS";position:absolute;left:10%;background-color:
+        white;margin-right:10%;padding-left:5%;}
+
+        .column1{width:30%;
+            float: left;
+            padding: 0.5%;
+            position: relative;
+        }
+        .row-first::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .para3{margin-top:86%;font-family: "Comic Sans MS";position:absolute;left:10%;}
+        .column2{
+            width:33%;float: left;position: relative;padding:4%;
+        }
+        .para4{margin-top:110%;font-family: "Comic Sans MS";position:absolute;left:10%;color:white;}
+        .para5{margin-top:110%;font-family: "Comic Sans MS";position:absolute;left:70%;color:white;}
+        .form{
+            position: absolute;
+            color: black;
+            margin-top:114%;
+            left: 62%;
+            padding: 2%;
+            font-size: 20px;
+            background-color: white;
+            width: 30%;
+            height: 22%;
+
+        }
+        .btn1{left:35%;top:1%;background-color:black;width:80px;height:30px;text-align: center;
+            position: relative;color: white;border-radius:40px;}
+
+    </style>
+</head>
+<body>
+<div class="split top">
+    <div class="center">
+        <h2>SUI-GENERIS 2K19</h2>
+        <h3>A National level Cultural Festival</h3>
+    </div>
+
+    <p id="demo"></p>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 5, 2019 15:37:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days+"d"+" "+hours+"h"+" "
+                + minutes + "m" +" "+ seconds + "s";
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+    <div class="btn" onclick="sidebar()"><i class="fa fa-bars"></i></div>
+    <a href="./login"><button class="button">LogIN</button></a>
+    <a href="./reg"><button class="button button1">SignUp</button></a>
+    <i class="fa fa-clock-o" style="margin-top:2.7%;position: relative;color:red;margin-left:2%"></i>
+    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+    <a href="https://twitter.com/" class="fa fa-twitter"></a>
+    <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+</div>
+<div class="sidenav" id="btn5">
+    <button class="btna"onclick="offsidebar()"><i class="fa fa-close"></i></button>
+    <a href= #pp1>About Us</a>
+    <a href="#pp2">Event Gallery</a>
+    <a href="#pp3">Organizers</a>
+    <a href="#pp4">Find Us|Ask a querry</a>
+</div>
+<script>
+function sidebar() {
+document.getElementById("btn5").style.display = "block";
+
+}
+function offsidebar() {
+document.getElementById("btn5").style.display="none";
+
+}
+</script>
+
+
+<div class="split bottom">
+    <div class = "para1" id="pp1">
+        <h2>About us</h2>
+        <p1>Over the years, Sui-Generis has grown to be one of the largest and most zestful College
+        Festival of the India. The festival consistently involves massive participation from various
+        universities and colleges. It is attempted to provide avenues to the student to show their talent
+        and performance. The Sui-Generis-2019 comprises of the events like Dumakshari, Funtoosh, Are You
+        Vj, Emotional Atyachar, Bcet Got Talent, Sher-e-Punjab, Ik Khed Punjab Di, Punjabi Quiz, Husan
+        Punjab Da, Aa Dekhein Zara-Returns, Pen Yard Wars, Brain Struggle, Planning Confidence and Kill the
+        Enemy, Facebook Train, Brain Tambola, Mind Hunt, Bollywood Mania, Turtle run, Capso advertise, Run
+        for fun, Dare To Win It, La Entertaino, Colour Carnival, Pic-Go- Hunt Collage, Tattoo Making And
+        Face Painting, Convince And Win, Crazy Minds, Apti-Loot, Fun Sport, Arm wrestling ,Tehzeeb, Street
+        Play, Lan Gaming, Raise Your Voice, Show Stealers, Yaaryian, Text-O-Ham, Cluster-O- Brands, Fun
+        With Words, FB Contest, Crazy Rush, The Next Sherlock Holmes, Share -O- Market, Choco-B, Picsence,
+            Dekho Likho Bolo, Rally, Hidden Personality etc.</p1>
+    </div>
+    <div class = "para2" id="pp2">
+        <h2>Event Gallery</h2>
+        <div class="row-first">
+            <div class="column1"><img src="{% static "images/culture1.jpg" %}" style="width:100%"></div>
+            <div class="column1"><img src="{% static "images/culture2.jpg" %}" style="width:100%;height:100%"></div>
+            <div class="column1"><img src="{% static "images/culture3.jpeg" %}" style="width:100%"></div>
+        </div>
+        <div class="row-first">
+            <div class="column1"><img src="{% static "images/culture4.jpeg" %}" style="width:100%"></div>
+            <div class="column1"><img src="{% static "images/culture5.jpeg" %}" style="width:100%"></div>
+            <div class="column1"><img src="{% static "images/culture7.jpeg" %}" style="width:100%" ></div>
+        </div>
+        <div class="row-first">
+            <div class="column1"><img src="{% static "images/culture6.png" %}" style="width:100%"></div>
+            <div class="column1"><img src="{% static "images/culture8.jpeg" %}" style="width:100%"></div>
+            <div class="column1"><img src="{% static "images/culture9.jpeg" %}" style="width:100%"></div>
+        </div>
+    </div>
+    <div class="para3" id="pp3">
+        <h2>Organizers</h2>
+        <div class="row-first">
+            <div class="column2"><img src="{% static "images/noimage.png" %}" style="width:100%;border-radius:50%;"><figcaption>Coming soon</figcaption></div>
+            <div class="column2"><img src="{% static "images/noimage.png" %}" style="width:100%;border-radius:50%"><figcaption>Coming soon</figcaption></div>
+            <div class="column2"><img src="{% static "images/noimage.png" %}" style="width:100%;border-radius:50%"><figcaption>Coming soon</figcaption></div>
+        </div>
+
+    </div>
+    <div class="para4" id="pp4">
+        <h2>Find Us</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d54091.391202301835!2d75.41109747871147!3d32.077038813093395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d32.0795873!2d75.4375681!4m5!1s0x391b8e05c10bab3d%3A0xe09dfec939b56dcf!2sBeant+College+of+Engineering+%26+Technology%2C+Gurdaspur%2C+Punjab!3m2!1d32.0619277!2d75.4415772!5e0!3m2!1sen!2sin!4v1542044554367"
+                width="600" height="450" alt="Beant College of Engineering & Technology, National Highway 15, Gurdaspur Pathankot Road, Bariar, Gurdaspur, Punjab 143521" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class="para5" id="pp5">
+        <h2>Ask a query</h2>
+    </div>
+    <div class="form">
+        <form method="post">
+            {% csrf_token %}
+            {{ form3 }}<br>
+            <input type="submit" value="submit" class="btn1">
+        </form>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

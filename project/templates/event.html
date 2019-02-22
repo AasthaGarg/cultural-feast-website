@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <title>Our Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .slideshow{top:0px;margin-left:0px;margin-right:0px;}
+        .mySlides {display:none;position: absolute;top:0px;margin-left:0px;margin-right:0px;height:100%;}
+         body{background-image:url("{% static "images/black.jpg" %}"); }
+        .paraA{margin-top:15%;margin-left:35%;}
+        .paraA h1{color:white;font-size:100px;font-weight: bolder;}
+        .paraB{margin-top:25%;margin-bottom:0px;}
+        .paraB h2{color: white;font-family: "Comic Sans MS";margin-left:10%;position:relative;font-size:50px;}
+        .paraF{margin-top:45%;}
+        .paraF h1{color: white;font-family: "Comic Sans MS";margin-left:10%;position:relative;font-size:40px;}
+        .paraJ h1{top:1530px;color: white;font-family: "Comic Sans MS";margin-left:10%;position:relative;font-size:30px;}
+        .container {
+            position:absolute;
+            width: 60%;
+            margin-left:10%;
+            top:800px;
+        }
+
+        .image{
+            opacity: 0.5;
+            display: block;
+            width: 60%;
+            height: 100%;
+        }
+        .paraC h1{color: white;top:200px;position:relative;left:20%;}
+        .paraD h1{color: white;top:140px;position:relative;left:62%;}
+        .paraE h1{color: white;top:500px;position:relative;left:20%;}
+        .paraG h1{color: white;top:1050px;position:relative;left:25%;}
+        .paraH h1{color: white;top:1000px;position:relative;left:65%;}
+        .paraI h1{color: white;top:1320px;position:relative;left:23%;}
+        .container1{
+            position: absolute;
+            width: 60%;
+            margin-left:50%;
+            top:800px;
+
+        }
+        .container2{
+            position: absolute;
+            width: 60%;
+            margin-top:30%;
+            margin-left:10%;
+            height: 55%;
+            top:790px;
+        }
+        .container3{
+            position: absolute;
+            width: 60%;
+            margin-top:1%;
+            margin-left:10%;
+            height: 55%;
+
+        }
+        .container4{
+            position: absolute;
+            width: 60%;
+            margin-top:1%;
+            margin-left:50%;
+            height: 55%;
+
+        }
+        .container5{
+            position: absolute;
+            width: 60%;
+            margin-top:32%;
+            margin-left:10%;
+            height: 55%;
+
+        }
+
+        .container1:hover .overlay {
+            opacity: 1;
+        }
+        .container2:hover .overlay {
+            opacity: 1;
+        }
+        .container3:hover .overlay {
+            opacity: 1;
+        }
+        .container4:hover .overlay {
+            opacity: 1;
+        }
+        .container5:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width:60%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color:white;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            font-family: "Comic Sans MS";
+            color:black;
+            font-size: 20px;
+            position: absolute;
+            padding: 2%;
+        }
+        .text button{
+            border-radius: 20%;
+            background-color: blue;
+            color: white;
+            left: 33%;
+            margin-top: 40px;
+            position: relative;
+            width: 100px;
+            height: 60px;
+            text-align: center;
+        }
+        .form{
+            position: relative;
+            color: black;
+            top:900px;
+            margin-left: 10%;
+            padding: 3%;
+            font-size: 20px;
+            background-color: white;
+            width: 40%;
+            height: 20%;
+            margin-bottom: 10%;
+        }
+        .btn{left:35%;margin-top:5%;background-color:black;width:80px;height:30px;text-align: center;
+        position: relative;color: white;border-radius:40px;}
+    </style>
+</head>
+
+<body>
+
+
+
+<div class="slideshow">
+    <img class="mySlides" src="{% static "images/rampwalk.jpeg" %}" style="width:100%;opacity:0.5">
+    <img class="mySlides" src="{% static "images/stagedance.jpg" %}" style="width:100%;opacity:0.5">
+    <img class="mySlides" src="{% static "images/concert.jpg" %}" style="width:100%;opacity:0.7">
+</div>
+<div class="paraA">
+    <h1>Our Events</h1>
+</div>
+<div class="paraB">
+    <h2>Fun Events</h2>
+</div>
+<div class="paraC">
+    <h1>Color Carnival</h1>
+</div>
+<div class="paraD">
+    <h1>Lan Gaming</h1>
+</div>
+<div class="paraE">
+    <h1>Crossing Hurdle</h1>
+</div>
+<div class="paraG">
+    <h1>Dance</h1>
+</div>
+<div class="paraH">
+    <h1>Tehzeeb</h1>
+</div>
+<div class="paraI">
+    <h1>Skit</h1>
+</div>
+<div class="paraJ">
+    <h1>Register to Participate</h1>
+</div>
+<div class="container">
+    <img class="image" src="{% static "images/colorcarnival.jpg" %}">
+    <div class="overlay">
+        <div class="text">A colour will be given to single team and participants have to pick max.
+                    no. of living things from campus<br>
+        <h3>Event Coordinator:<b>Manpreet Kaur</b></h3>
+            <h3>Mobile no.<b>9123456780</b></h3>
+
+        </div>
+    </div>
+</div>
+<div class="container1">
+    <img class="image" src="{% static "images/langaming.jpg" %}">
+    <div class="overlay">
+        <div class="text">Competition on various games such as counters strike and need for speed.<br>
+            <h3>Event Coordinator:<b>Shashi Bala</b></h3>
+            <h3>Mobile no.<b>9120304050</b></h3>
+        </div>
+    </div>
+</div>
+<div class="container2">
+    <img class="image" src="{% static "images/crossinghurdle.jpg" %}">
+    <div class="overlay">
+        <div class="text"><b>Ist Round-</b>Race and solve problems.<br>
+            <b>IInd Round-</b>Answer the problems and win.<br>
+            <h3>Event Coordinator:<b>Manas Singh</b></h3>
+            <h3>Mobile no.<b>8720304050</b></h3>
+        </div>
+    </div>
+</div>
+<div class="paraF">
+    <h1>Stage Events</h1>
+</div>
+<div class="container3">
+    <img class="image" src="{% static "images/Dance.jpg" %}">
+    <div class="overlay">
+        <div class="text"><b>Solo Dance-</b>You can choose Classical/Western.<br>
+            <b>Group Dance-</b>Maximum 5 member team.Time limit to perform is 5-8mins.<br>
+            <h3>Event Coordinator:<b>Sahil Sharma</b></h3>
+            <h3>Mobile no.<b>9123456780</b></h3>
+
+        </div>
+    </div>
+</div>
+<div class="container4">
+    <img class="image" src="{% static "images/Tehzeeb.jpeg" %}">
+    <div class="overlay">
+        <div class="text">Fashion show depicting various themes and cultures.Maximum members in a team
+            8.<br>
+            <h3>Event Coordinator:<b>Madhu Zindal</b></h3>
+            <h3>Mobile no.<b>9120304050</b></h3>
+        </div>
+    </div>
+</div>
+<div class="container5">
+    <img class="image" src="{% static "images/skit.jpg" %}">
+    <div class="overlay">
+        <div class="text">6-8 members team.Time to perform 8-10 minutes.<br>
+            <h3>Event Coordinator:<b>Manas Singh</b></h3>
+            <h3>Mobile no.<b>8720304050</b></h3>
+        </div>
+    </div>
+</div>
+<div class="form">
+    <form method="post">
+        {% csrf_token %}
+        {{ form2 }}<br>
+        <input type="submit" value="submit" class="btn">
+    </form>
+</div>
+
+<script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background-color:black;
+        }
+
+        form {
+            right: -36%;
+            box-decoration-break: inherit;
+            width: 300px;
+            height: 250px;
+            border: 5px solid black;
+            border-radius: 5px;
+            padding: 10px 10px 10px;
+            position: relative;
+            text-align: left;
+            background-color: grey;
+            top: 30%;
+        }
+        h4{top:80%;position: absolute;right:45%;}
+        a:hover{text-decoration: none;}
+        h3{top:70%;position: absolute;right:41%;}
+
+    </style>
+</head>
+<body>
+<h1 class="text-center"id="h1tag"style="color:white">LOGIN HERE</h1>
+<div class = "container">
+
+
+    <div class="split up">
+        <div class="center">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form1 }}<br>
+                <div class="text-center" style="padding:4%;top:100%;position:absolute">
+                    <input type="submit"
+                           value="submit"
+                           class="btn btn-default btn-md" style="left:46%;position:relative">
+                    <input type="reset"
+                           value="Reset"
+                           class="btn btn-default btn-md" style="left:55%;position:relative">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="split down">
+        <h4><a href="./">Goto Home Page</a></h4>
+        <h3><a href="./reg">Goto Registration Page</a></h3>
+
+    </div>
+</div>
+</body>
+</html>
